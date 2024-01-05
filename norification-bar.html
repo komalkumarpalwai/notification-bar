@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification-Bar</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+        .buttons
+        {
+            display: flex;
+            margin: 10% 5%;
+        }
+        .buttons button{
+            margin: 2%;
+            color: white;
+            width: 10vw;
+            background-color:skyblue;
+            height: 5vh;
+            border: 0;
+            outline: 0;
+        }
+        #toastbar
+        {
+            position: absolute;
+            padding: 20px;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+         
+        }
+        .toast
+        {
+            background-color: rgba(135, 207, 235, 0.514);
+            color: black;
+            font-weight: 100;
+            margin: 3%;
+            text-align: center;
+            font-size: 1.5vw;
+            height: 20px;
+            width: 300px;
+            font-family: cursive;
+            box-shadow: 1px 1px 10px blueviolet;
+        }
+    </style>
+<div class="buttons">
+    <button onclick="show(successmsg)">Success</button>
+<button  onclick="show(errormsg)">Invalid</button>
+    <button  onclick="show(invalid)">Error</button>
+</div>
+<div id="toastbar"></div>
+    <script src="notification.js"></script>
+</body>
+</html>
